@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "Weibo.h"
+#import "WeiboCell.h"
+#import "WeiboFrame.h"
 
 @interface ViewController ()
+
+@property (strong,nonatomic) NSArray *statusFrames;
 
 @end
 
@@ -16,7 +21,49 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+}
+
+#pragma maark - 数据源
+//返回组数的代理方法
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+//返回行数的代理方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.statusFrames.count;
+}
+
+//返回每一行cell的代理方法
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    WeiboCell *cell = [WeiboCell cellWithTableView:tableView];
+    
+    //设置数据
+    cell.weiboFrame = self.statusFrames[indexPath.row];
+    //返回
+    return cell;
+
+}
+
+#pragma mark - 懒加载
+- (NSArray *)statusFrames{
+    
+}
+
+#pragma mark - 代理方法
+// 这个方法比cellForRowAtIndexPath先调用，即创建cell的时候得先知道它的高度，所以高度必须先计算
+// 所以在懒加载的时候获取微博的数据立即去计算行高
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //取出相应行的frame模型
+    WeiboFrame *wbf = self.statusFrames[indexPath.row];
+    NSLog(@"height = %f",wbf.cellHeight);
+    return wbf.cellHeight;
+}
+
+//隐藏状态栏
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  WeiboFrame.m
 //  WeiboList
 //
 //  Created by AbelSu on 16/3/12.
 //  Copyright © 2016年 AbelSu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "WeiboFrame.h"
 
-@interface ViewController : UITableViewController
-
+@implementation WeiboFrame
 
 @end
-

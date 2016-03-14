@@ -13,6 +13,9 @@
 		BC1014811C9442CA00F03B6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC10147F1C9442CA00F03B6A /* Main.storyboard */; };
 		BC1014831C9442CA00F03B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1014821C9442CA00F03B6A /* Assets.xcassets */; };
 		BC1014861C9442CA00F03B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1014841C9442CA00F03B6A /* LaunchScreen.storyboard */; };
+		BC10148F1C9448EB00F03B6A /* Weibo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC10148E1C9448EB00F03B6A /* Weibo.m */; };
+		BC1014921C94497200F03B6A /* WeiboCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1014911C94497200F03B6A /* WeiboCell.m */; };
+		BC1014951C94498F00F03B6A /* WeiboFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1014941C94498F00F03B6A /* WeiboFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		BC1014821C9442CA00F03B6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC1014851C9442CA00F03B6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC1014871C9442CA00F03B6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC10148D1C9448EB00F03B6A /* Weibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weibo.h; sourceTree = "<group>"; };
+		BC10148E1C9448EB00F03B6A /* Weibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weibo.m; sourceTree = "<group>"; };
+		BC1014901C94497200F03B6A /* WeiboCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboCell.h; sourceTree = "<group>"; };
+		BC1014911C94497200F03B6A /* WeiboCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboCell.m; sourceTree = "<group>"; };
+		BC1014931C94498F00F03B6A /* WeiboFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboFrame.h; sourceTree = "<group>"; };
+		BC1014941C94498F00F03B6A /* WeiboFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboFrame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +67,16 @@
 		BC1014751C9442CA00F03B6A /* WeiboList */ = {
 			isa = PBXGroup;
 			children = (
+				BC10148D1C9448EB00F03B6A /* Weibo.h */,
+				BC10148E1C9448EB00F03B6A /* Weibo.m */,
 				BC1014791C9442CA00F03B6A /* AppDelegate.h */,
 				BC10147A1C9442CA00F03B6A /* AppDelegate.m */,
 				BC10147C1C9442CA00F03B6A /* ViewController.h */,
 				BC10147D1C9442CA00F03B6A /* ViewController.m */,
+				BC1014901C94497200F03B6A /* WeiboCell.h */,
+				BC1014911C94497200F03B6A /* WeiboCell.m */,
+				BC1014931C94498F00F03B6A /* WeiboFrame.h */,
+				BC1014941C94498F00F03B6A /* WeiboFrame.m */,
 				BC10147F1C9442CA00F03B6A /* Main.storyboard */,
 				BC1014821C9442CA00F03B6A /* Assets.xcassets */,
 				BC1014841C9442CA00F03B6A /* LaunchScreen.storyboard */,
@@ -149,8 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC10148F1C9448EB00F03B6A /* Weibo.m in Sources */,
+				BC1014921C94497200F03B6A /* WeiboCell.m in Sources */,
 				BC10147E1C9442CA00F03B6A /* ViewController.m in Sources */,
 				BC10147B1C9442CA00F03B6A /* AppDelegate.m in Sources */,
+				BC1014951C94498F00F03B6A /* WeiboFrame.m in Sources */,
 				BC1014781C9442CA00F03B6A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
