@@ -34,6 +34,27 @@
 @implementation WeiboCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView{
+    static NSString *identifier = @"status";
+    //1.缓存中取
+    WeiboCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    //2.创建
+    if (cell == nil) {
+        cell = [[WeiboCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    return cell;
+}
+
+/**
+ * 构造方法(在初始化对象的时候会调用)
+ * 一般在这个方法中添加需要显示的子控件
+ */
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        // 让自定义Cell和系统的cell一样，一创建出来就拥有一些子控件提供给我们使用
+        // 1.创建
+    }
     
 }
 
