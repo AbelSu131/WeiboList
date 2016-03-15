@@ -62,7 +62,7 @@
     // 设置配图的frame
     if (_weibo.picture) {// 有配图
         CGFloat pictureViewX = iconViewX;
-        CGFloat pictureViewY = CGRectGetMaxY(self.iconF) + padding;
+        CGFloat pictureViewY = CGRectGetMaxY(self.introF) + padding;
         CGFloat pictureViewW = 200;
         CGFloat pictureViewH = 200;
         self.pictureF = CGRectMake(pictureViewX, pictureViewY, pictureViewW, pictureViewH);

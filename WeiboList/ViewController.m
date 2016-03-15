@@ -48,7 +48,7 @@
 #pragma mark - 懒加载
 - (NSArray *)statusFrames{
     if (_statusFrames == nil) {
-        NSString *fullPath = [[NSBundle mainBundle]pathForResource:@"statuses.plist" ofType:nil];
+        NSString *fullPath = [[NSBundle mainBundle]pathForResource:@"status.plist" ofType:nil];
         NSArray *dicArray = [NSArray arrayWithContentsOfFile:fullPath];
         NSMutableArray *models = [NSMutableArray arrayWithCapacity:dicArray.count];
         for (NSDictionary *dict in dicArray) {
