@@ -103,8 +103,28 @@
 - (void)settingData{
     Weibo *weibo = self.weiboFrame.weibo;
     
-    //设置头像
+    // 设置头像
+    self.iconView.image = [UIImage imageNamed:weibo.icon];
+    // 设置昵称
+    self.nameLabel.text = weibo.name;
+    // 设置vip
+    if (weibo.vip) {
+        self.vipView.hidden = NO;
+        self.nameLabel.textColor = [UIColor redColor];
+    }else{
+        self.vipView.hidden = YES;
+        self.nameLabel.textColor = [UIColor blackColor];
+    }
+    //设置内容
+    self.introLabel.text = weibo.text;
     
+    //设置配图
+    if (weibo.picture) {
+        self.pictureView.image = [UIImage imageNamed:weibo.picture];
+        self.pictureView.hidden = NO;
+    }else{
+        self.pictureView.hidden = YES;
+    }
     
 }
 
@@ -113,19 +133,24 @@
  *  设置子控件的frame
  */
 - (void)settingFrame{
+    //设置头像的frame
+    self.iconView.frame = self.weiboFrame.iconF;
     
+    //设置昵称的frame
+    self.nameLabel.frame = self.weiboFrame.nameF;
+    
+    //设置vip的frame
+    self.vipView.frame = self.weiboFrame.vipF;
+    
+    //设置正文的frame
+    self.introLabel.frame = self.weiboFrame.introF;
+    
+    //设置配图的frame
+    if (self.weiboFrame.weibo.picture) { //有配图
+        self.pictureView.frame = self.weiboFrame.pictureF;
+    }
 }
 
 
-
-- (void)awakeFromNib {
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end
