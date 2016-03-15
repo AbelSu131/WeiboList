@@ -53,8 +53,15 @@
         NSMutableArray *models = [NSMutableArray arrayWithCapacity:dicArray.count];
         for (NSDictionary *dict in dicArray) {
             // 创建模型
+            Weibo *weibo = [Weibo weiboWithDict:dict];
+            // 根据模型数据创建frame模型
+            WeiboFrame *wbF = [[WeiboFrame alloc]init];
+            wbF.weibo = weibo;
+            [models addObject:wbF];
         }
+        self.statusFrames = [models copy];
     }
+    return _statusFrames;
     
 }
 
@@ -74,9 +81,6 @@
     return YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end
